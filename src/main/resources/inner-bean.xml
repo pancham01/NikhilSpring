@@ -6,17 +6,17 @@
 
 	<!-- bean definitions here -->
 
-	<bean name="address" class="com.explore.model.Address">
-		<property name="city" value="GZB" />
-		<property name="state" value="UP" />
-	</bean>
 
-
-	<bean name="emp" class="com.explore.model.Employee"
-		scope="prototype">
+	<bean name="emp" class="com.explore.model.Employee">
 		<property name="id" value="1" />
-		<property name="name" value="Avinash" />
+		<property name="name" value="John" />
 		<property name="gender" value="M" />
+		<property name="address">
+			<bean class="com.explore.model.Address">
+				<property name="city" value="Mumbai" />
+				<property name="state" value="MH" />
+			</bean>
+		</property>
 	</bean>
 
 

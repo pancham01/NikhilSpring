@@ -6,47 +6,17 @@
 
 	<!-- bean definitions here -->
 
-	<bean name="add" class="com.explore.model.Address">
+	<bean name="address" class="com.explore.model.Address">
 		<property name="city" value="GZB" />
 		<property name="state" value="UP" />
 	</bean>
 
-	<!-- <bean name="emp" class="com.explore.model.Employee"> <constructor-arg 
-		name="id" value="1" /> <constructor-arg name="name" value="Avinash" /> <constructor-arg 
-		name="gender" value="M" /> <constructor-arg name="address" ref="add"/> </bean> -->
 
-	<bean name="emp" class="com.explore.model.Employee">
+	<bean name="emp" class="com.explore.model.Employee"
+		scope="prototype">
 		<property name="id" value="1" />
 		<property name="name" value="Avinash" />
 		<property name="gender" value="M" />
-		<property name="address" ref="add" />
-		<property name="list">
-			<list>
-				<value>1111</value>
-				<value>1111</value>
-				<value>1111</value>
-				<value>1111</value>
-				<value>1111</value>
-			</list>
-		</property>
-		<property name="set">
-			<set>
-				<value>1111</value>
-				<value>1111</value>
-				<value>11</value>
-				<value>2111</value>
-				<value>3111</value>
-			</set>
-		</property>
-		<property name="map">
-			<map>
-				<entry key="1" value="ONE" />
-				<entry key="2" value="TWO" />
-				<entry key="3" value="THREE" />
-				<entry key="4" value="FOUR" />
-				<entry key="1" value="one" />
-			</map>
-		</property>
 	</bean>
 
 
