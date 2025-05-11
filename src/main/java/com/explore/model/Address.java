@@ -1,7 +1,10 @@
 package com.explore.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Address {
-	private String city,state;
+	private String city="Shimla",state="UK";
 
 	public Address() {
 		super();

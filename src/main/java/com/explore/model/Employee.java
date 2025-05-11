@@ -1,21 +1,24 @@
 package com.explore.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Employee {
 
-	private int id;
+	private int id = 1;
 
-	private String name, gender;
+	private String name = "Guest", gender = "M";
 
+//	@Autowired
 	private Address address;
 
-	
 	public Employee() {
 		super();
 		System.out.println("Employee.Employee()");
 	}
 
-	
-	public Employee(int id, String name, String gender,Address address) {
+	public Employee(int id, String name, String gender, Address address) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -27,6 +30,7 @@ public class Employee {
 		return address;
 	}
 
+	@Autowired
 	public void setAddress(Address address) {
 		System.out.println("Employee.setAddress()");
 		this.address = address;
@@ -58,7 +62,6 @@ public class Employee {
 		System.out.println("Employee.setGender()");
 		this.gender = gender;
 	}
-
 
 	@Override
 	public String toString() {
